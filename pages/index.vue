@@ -6,7 +6,7 @@
           <logo />
           <vuetify-logo />
         </div>
-        <v-card>
+        <v-card elevation="6" class="py-6">
           <v-card-title class="headline">
             Welcome to the Vuetify + Nuxt.js template code builder
           </v-card-title>
@@ -39,22 +39,51 @@
               Continue
             </v-btn>
           </v-card-actions>
-          <v-alert type="success">
-            I'm a success alert.
-          </v-alert>
-
-          <v-alert type="info">
-            I'm an info alert.
-          </v-alert>
-
-          <v-alert type="warning">
-            I'm a warning alert.
-          </v-alert>
-
-          <v-alert type="error">
-            I'm an error alert.
-          </v-alert>
         </v-card>
+        <v-container fluid>
+          <v-row>
+            <v-col>
+              <v-alert
+                type="success"
+                close-label="close"
+                dismissible
+                transition="slide-x-transition"
+                shaped
+              >
+                I'm a success alert.
+              </v-alert>
+              <v-alert
+                type="info"
+                close-label="close"
+                dismissible
+                transition="slide-x-transition"
+                shaped
+              >
+                I'm an info alert.
+              </v-alert>
+
+              <v-alert
+                type="warning"
+                close-label="close"
+                dismissible
+                transition="slide-x-transition"
+                shaped
+              >
+                I'm a warning alert.
+              </v-alert>
+
+              <v-alert
+                type="error"
+                close-label="close"
+                dismissible
+                transition="slide-x-transition"
+                shaped
+              >
+                I'm an error alert.
+              </v-alert>
+            </v-col>
+          </v-row>
+        </v-container>
         <progressBar />
         <ProductCard class="mt-8" />
       </v-col>
