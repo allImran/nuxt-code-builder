@@ -43,6 +43,11 @@
         <v-container fluid>
           <v-row>
             <v-col>
+              <v-progress-linear
+                indeterminate
+                color="yellow darken-2"
+                class="my-6"
+              ></v-progress-linear>
               <v-alert
                 type="success"
                 close-label="close"
