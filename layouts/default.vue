@@ -1,5 +1,5 @@
 <template>
-  <v-app dark>
+  <v-app>
     <v-navigation-drawer
       v-model="drawer"
       :mini-variant="miniVariant"
@@ -50,9 +50,7 @@
       <v-list>
         <v-list-item @click.native="right = !right">
           <v-list-item-action>
-            <v-icon light>
-              mdi-repeat
-            </v-icon>
+            <v-icon light>mdi-repeat</v-icon>
           </v-list-item-action>
           <v-list-item-title>Switch drawer (click me)</v-list-item-title>
         </v-list-item>
