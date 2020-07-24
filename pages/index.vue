@@ -1,95 +1,51 @@
 <template>
-  <v-layout column justify-center align-center>
-    <v-flex xs12 sm8 md6>
-      <div class="text-center">
-        <logo />
-        <vuetify-logo />
-      </div>
-      <v-card>
-        <v-card-title class="headline">
-          Welcome to the Vuetify + Nuxt.js template code builder
-        </v-card-title>
-        <v-card-text>
-          <p>
-            Vuetify is a progressive Material Design component framework for
-            Vue.js. It was designed to empower developers to create amazing
-            applications.
-          </p>
-          <p>
-            For more information on Vuetify, check out the
-            <a
-              href="https://vuetifyjs.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              documentation </a
-            >.
-          </p>
-          <p>
-            If you have questions, please join the official
-            <a
-              href="https://chat.vuetifyjs.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="chat"
-            >
-              discord </a
-            >.
-          </p>
-          <p>
-            Find a bug? Report it on the github
-            <a
-              href="https://github.com/vuetifyjs/vuetify/issues"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="contribute"
-            >
-              issue board </a
-            >.
-          </p>
-          <p>
-            Thank you for developing with Vuetify and I look forward to bringing
-            more exciting features in the future.
-          </p>
-          <div class="text-xs-right">
-            <em><small>&mdash; John Leider</small></em>
-          </div>
-          <hr class="my-3" />
-          <a
-            href="https://nuxtjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Nuxt Documentation
-          </a>
-          <br />
-          <a
-            href="https://github.com/nuxt/nuxt.js"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Nuxt GitHub
-          </a>
-        </v-card-text>
-        <v-card-actions>
-          <v-spacer />
-          <v-btn color="primary" nuxt to="/inspire">
-            Continue
-          </v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-flex>
-  </v-layout>
+  <v-container fluid pa-0>
+    <v-row
+      class="mt-6"
+      justify-md="start"
+      justify-sm="center"
+      justify-lg="end"
+      align-md="start"
+      align-sm="center"
+      align-lg="end"
+    >
+      <v-col
+        xl="4"
+        lg="4"
+        md="9"
+        sm="10"
+        cols="auto"
+      >Choose our web design services, and your business can count on 100 percent transparency. From our personalized quotes to our initial designs, our team provides your company with complete access to our web design pricing and strategies.</v-col>
+      <v-col
+        xl="4"
+        lg="4"
+        md="9"
+        sm="10"
+        cols="auto"
+      >You can also include additional features as a part of your professional website design. For example, you can request our developers to integrate a database into your design, enable ecommerce functionality, and more.</v-col>
+      <v-col
+        xl="4"
+        lg="4"
+        md="9"
+        sm="10"
+        cols="auto"
+      >If you’re looking to launch your redesigned or brand-new website fast, we offer rapid web design services. Partner with our award-winning team of web designers for this service, and they’ll create a site in 30 days for your business.</v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>
 import Logo from '~/components/Logo.vue'
 import VuetifyLogo from '~/components/VuetifyLogo.vue'
+import progressBar from '~/components/progressBar.vue'
+import ProductCard from '~/components/ProductCard.vue'
 
 export default {
   components: {
     Logo,
     VuetifyLogo,
+    progressBar,
+    ProductCard,
   },
 }
 </script>
