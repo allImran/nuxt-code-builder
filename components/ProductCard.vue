@@ -21,16 +21,14 @@
         active-class="secondary--text"
         mandatory
       >
-        <v-chip v-for="size in sizes" :key="size" :value="size">
-          {{ size }}
-        </v-chip>
+        <v-chip v-for="size in sizes" :key="size" :value="size">{{
+          size
+        }}</v-chip>
       </v-chip-group>
     </v-card-text>
 
     <v-card-actions>
-      <v-btn block class="white--text" color="primary">
-        Add to Cart
-      </v-btn>
+      <v-btn block class="white--text" color="primary">Add to Cart</v-btn>
     </v-card-actions>
   </v-card>
 </template>
