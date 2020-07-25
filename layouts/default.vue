@@ -36,15 +36,35 @@
         <nuxt />
       </v-container>
     </v-main>
-    <v-footer :absolute="!fixed" app>
-      <p class="ggg">Test</p>
-      <span class="middle-transformer">&copy; {{ new Date().getFullYear() }}</span>
-    </v-footer>
+
+    <v-footer
+        padless
+      >
+        <v-card
+          flat
+          width="100%"
+          tile
+          class="blue-grey lighten-5 text-center"
+        >
+          <v-card-text>
+            <FooterIcon />
+          </v-card-text>
+
+          <v-divider insert light></v-divider>
+
+          <v-card-text class="text--purple">
+            {{ new Date().getFullYear() }} — <strong>CodeBuilder</strong>
+          </v-card-text>
+        </v-card>
+      </v-footer>
+    
   </v-app>
 </template>
 
 <script>
+import FooterIcon from '@/components/footer/FooterIcon'
 export default {
+  components: {FooterIcon},
   data() {
     return {
       clipped: false,
