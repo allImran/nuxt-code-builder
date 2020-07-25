@@ -37,7 +37,8 @@
       </v-container>
     </v-main>
     <v-footer :absolute="!fixed" app>
-      <span>&copy; {{ new Date().getFullYear() }}</span>
+      <p class="ggg">Test</p>
+      <span class="middle-transformer">&copy; {{ new Date().getFullYear() }}</span>
     </v-footer>
   </v-app>
 </template>
