@@ -1,35 +1,34 @@
 <template>
   <v-app>
-    <v-navigation-drawer v-model="drawer" :clipped="clipped" temporary class="hidden-sm-and-up" app>
+    <v-navigation-drawer v-model="drawer" temporary class="hidden-sm-and-up" app>
       <v-list>
-        <v-list-item v-for="(item, i) in items" :key="i" :to="item.to" router exact>
+        <v-list-item v-for="(menu, index) in menus" :key="index">
           <v-list-item-action>
-            <v-icon>{{ item.icon }}</v-icon>
+            <v-icon left color="secondary">mdi-{{ menu.icon }}</v-icon>
           </v-list-item-action>
           <v-list-item-content>
-            <v-list-item-title v-text="item.title" />
+            <v-list-item-title class="secondary--text text-capitalize" v-text="menu.title" />
           </v-list-item-content>
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-app-bar
-      :clipped-left="clipped"
-      fixed
-      app
-      elevation="0"
-      color="#fff"
-      class="pa-xl-6 pa-lg-5 pa-md-4 pa-sm-3 pa-2"
-    >
+    <v-app-bar fixed app elevation="0" color="#fff" class="pa-xl-6 pa-lg-5 pa-md-4 pa-sm-3 pa-2">
       <v-app-bar-nav-icon class="hidden-sm-and-up" @click.stop="drawer = !drawer" />
+      <v-avatar color="primary" class="avatar-box-shadow">
+        <span class="white--text headline">CB</span>
+      </v-avatar>
+      <v-toolbar-title class="pl-3 pr-12" v-text="title" />
 
-      <v-btn icon @click.stop="clipped = !clipped">
-        <v-icon>mdi-application</v-icon>
+      <v-btn
+        text
+        v-for="(menu, index) in menus"
+        :key="index"
+        color="secondary"
+        class="text-capitalize hidden-xs-only"
+      >
+        <v-icon left color="secondary">mdi-{{ menu.icon }}</v-icon>
+        {{ menu.title }}
       </v-btn>
-      <v-btn icon @click.stop="fixed = !fixed">
-        <v-icon>mdi-minus</v-icon>
-      </v-btn>
-      <v-toolbar-title v-text="title" />
-      <v-spacer />
     </v-app-bar>
     <v-main>
       <v-container>
@@ -37,53 +36,54 @@
       </v-container>
     </v-main>
 
-    <v-footer
-        padless
-      >
-        <v-card
-          flat
-          width="100%"
-          tile
-          class="blue-grey lighten-5 text-center"
-        >
-          <v-card-text>
-            <FooterIcon />
-          </v-card-text>
+    <v-footer padless>
+      <v-card flat width="100%" tile class="blue-grey lighten-5 text-center">
+        <v-card-text>
+          <FooterIcon />
+        </v-card-text>
 
-          <v-divider insert light></v-divider>
+        <v-divider insert light></v-divider>
 
-          <v-card-text class="text--purple">
-            {{ new Date().getFullYear() }} — <strong>CodeBuilder</strong>
-          </v-card-text>
-        </v-card>
-      </v-footer>
-    
+        <v-card-text class="text--purple">
+          {{ new Date().getFullYear() }} —
+          <strong>CodeBuilder</strong>
+        </v-card-text>
+      </v-card>
+    </v-footer>
   </v-app>
 </template>
 
 <script>
 import FooterIcon from '@/components/footer/FooterIcon'
 export default {
-  components: {FooterIcon},
+  components: { FooterIcon },
   data() {
     return {
-      clipped: false,
       drawer: false,
-      fixed: false,
-      items: [
+      menus: [
         {
-          icon: 'mdi-apps',
-          title: 'Welcome',
-          to: '/',
+          title: 'home',
+          icon: 'home',
         },
         {
-          icon: 'mdi-chart-bubble',
-          title: 'Inspire',
-          to: '/inspire',
+          title: 'contact us',
+          icon: 'account-box',
+        },
+        {
+          title: 'blog',
+          icon: 'blogger',
+        },
+        {
+          title: 'services',
+          icon: 'briefcase',
+        },
+        {
+          title: 'portfolio',
+          icon: 'apps',
         },
       ],
 
-      title: 'Vuetify.js',
+      title: 'Code Builder IT',
     }
   },
 }
