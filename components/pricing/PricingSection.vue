@@ -1,16 +1,24 @@
 <template>
-  <v-col>
+  <v-container fluid pa-0>
     <SubTitle :text="subTitle" />
     <Title :text="title" />
 
     <v-row class="justify-center align-center" no-gutters>
-      <template v-for="(height, index) in pricing">
-        <v-col :key="index" xl="3" lg="3" md="4" sm="6" cols="12">
-          <PricingTable :height="height" />
-        </v-col>
+      <template v-for="(plan, index) in plans">
+        <v-hover v-slot:default="{ hover }" :key="index">
+          <v-col cols="auto">
+            <PricingTable
+              :height="plan.height"
+              :plan="plan"
+              class="price-table"
+              :class="[{ 'on-hover': hover  }, {  'front-table' : index==1 }]"
+              :hover="hover"
+            />
+          </v-col>
+        </v-hover>
       </template>
     </v-row>
-  </v-col>
+  </v-container>
 </template>
 
 <script>
@@ -21,8 +29,28 @@ export default {
   data() {
     return {
       title: 'best solution for out clients',
-      subTitle: 'Pricing plan',
+      subTitle: 'Pricing plans',
       pricing: ['450px', '500px', '450px'],
+      plans: [
+        {
+          title: 'Landing Page',
+          price: '200',
+          features: ['SEO Audits', 'Fast Reload', 'Responsive ', 'Cool Effect'],
+          height: '450px',
+        },
+        {
+          title: 'Professional Website',
+          price: '500',
+          features: ['SEO Audits', 'Fast Reload', 'Responsive ', 'Cool Effect'],
+          height: '500px',
+        },
+        {
+          title: 'Big Apps',
+          price: '1000',
+          features: ['SEO Audits', 'Fast Reload', 'Responsive ', 'Cool Effect'],
+          height: '450px',
+        },
+      ],
     }
   },
   components: {
@@ -32,3 +60,29 @@ export default {
   },
 }
 </script>
+<style lang="scss">
+.price-table:not(.on-hover) {
+  opacity: 0.9;
+}
+.on-hover {
+  z-index: 10;
+  background-image: linear-gradient(90deg, #d81b60 0%, #880e4f 100%);
+  border-color: #6557e8;
+}
+.on-hover:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-image: url('https://livewp.site/wp/md/ewebot/wp-content/themes/ewebot/dist/img/pricebox_bg.c3c0bcec.png');
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+.price-table {
+  transition: all 0.4s ease-in-out;
+}
+</style>
