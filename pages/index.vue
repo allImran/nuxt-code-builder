@@ -3,21 +3,22 @@
     <v-row
       class="mt-6"
     >
-     
       <PricingSection />
+      <BlogSection />
      
-      
     </v-row>
   </v-container>
 </template>
 
 <script>
 import PricingSection from '@/components/pricing/PricingSection'
+import BlogSection from '@/components/blog/BlogSection'
 
 export default {
   name: 'home-page',
   components: {
-    PricingSection
+    PricingSection,
+    BlogSection
   },
 }
 </script>
