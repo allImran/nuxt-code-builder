@@ -1,5 +1,7 @@
 <template>
     <v-card
+      flat
+      light
       class="mx-auto" 
     >
       <v-img
@@ -27,16 +29,20 @@
   
         <v-btn
           icon
-          @click="show = !show"
+          
         >
-          <v-icon>mdi-share-variant</v-icon>
+          <!-- <v-icon>mdi-share-variant</v-icon> -->
+          <SpeedDial />
         </v-btn>
       </v-card-actions>
   
-      <v-expand-transition>
-        <div v-show="show">
-          <v-divider></v-divider>
-        </div>
-      </v-expand-transition>
+      
     </v-card>
 </template>
+
+<script>
+import SpeedDial from '@/components/SpeedDial'
+export default {
+  components: {SpeedDial}
+}
+</script>
