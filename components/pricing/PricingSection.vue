@@ -3,15 +3,15 @@
     <SubTitle :text="subTitle" />
     <Title :text="title" />
 
-    <v-row class="justify-center align-center" no-gutters>
+    <v-row class="justify-center align-center" no-gutters data-aos="fade-in">
       <template v-for="(plan, index) in plans">
         <v-hover v-slot:default="{ hover }" :key="index">
-          <v-col cols="auto">
+          <v-col cols="auto" :data-aos="plan.slide" data-aos-duration="1500">
             <PricingTable
               :height="plan.height"
               :plan="plan"
               class="price-table"
-              :class="[{ 'on-hover': hover  }, {  'front-table' : index==1 }]"
+              :class="[{ 'on-hover': hover }, { 'front-table': index == 1 }]"
               :hover="hover"
             />
           </v-col>
@@ -37,18 +37,21 @@ export default {
           price: '200',
           features: ['SEO Audits', 'Fast Reload', 'Responsive ', 'Cool Effect'],
           height: '450px',
+          slide: 'flip-right',
         },
         {
           title: 'Professional Website',
           price: '500',
           features: ['SEO Audits', 'Fast Reload', 'Responsive ', 'Cool Effect'],
           height: '500px',
+          slide: 'flip-up',
         },
         {
           title: 'Big Apps',
           price: '1000',
           features: ['SEO Audits', 'Fast Reload', 'Responsive ', 'Cool Effect'],
           height: '450px',
+          slide: 'flip-left',
         },
       ],
     }
