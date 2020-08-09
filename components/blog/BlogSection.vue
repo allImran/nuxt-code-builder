@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid pa-0>
+  <v-container  fluid>
     <SubTitle :text="subTitle" />
     <Title :text="title" />
 
@@ -25,6 +25,7 @@ import Title from '@/components/Title'
 import SubTitle from '@/components/SubTitle'
 import BlogComponent from '@/components/blog/BlogComponent'
 export default {
+  name: 'blog-section',
   components: { BlogComponent },
   data() {
     return {

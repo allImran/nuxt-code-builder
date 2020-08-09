@@ -26,6 +26,7 @@ import Title from '@/components/Title'
 import SubTitle from '@/components/SubTitle'
 import PricingTable from '@/components/pricing/PricingTable'
 export default {
+  name: 'pricing-section',
   data() {
     return {
       title: 'best solution for out clients',
