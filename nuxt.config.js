@@ -40,12 +40,18 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['@/assets/sass/main.scss'],
+  css: [
+    '@/assets/sass/main.scss',
+    'vue-slick-carousel/dist/vue-slick-carousel.css',
+  ],
   /*
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
    */
-  plugins: [{ src: '@/plugins/aos', ssr: false }],
+  plugins: [
+    { src: '@/plugins/aos', ssr: false },
+    { src: '@/plugins/vue-slick-carousel.js' },
+  ],
 
   /*
    ** Auto import components
