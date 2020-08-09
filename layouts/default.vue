@@ -25,6 +25,7 @@
       app
       elevation="0"
       color="#fff"
+      height="100"
       class="pa-xl-6 pa-lg-5 pa-md-4 pa-sm-3 pa-2"
     >
       <v-app-bar-nav-icon

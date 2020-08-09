@@ -6,7 +6,7 @@
     <v-row class="justify-center align-center" no-gutters data-aos="fade-in">
       <template v-for="(plan, index) in plans">
         <v-hover v-slot:default="{ hover }" :key="index">
-          <v-col cols="auto" :data-aos="plan.slide" data-aos-duration="1500">
+          <v-col cols="auto" sm="7" lg="auto" :data-aos="plan.slide" data-aos-duration="1500">
             <PricingTable
               :height="plan.height"
               :plan="plan"

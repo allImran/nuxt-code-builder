@@ -9,9 +9,9 @@
         :key="index"
         :data-aos="plan.slide"
         data-aos-duration="1500"
-        xl="4"
-        md="4"
-        sm="6"
+        lg="4"
+        md="8"
+        sm="8"
         cols="12"
       >
         <BlogComponent />
