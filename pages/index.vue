@@ -1,23 +1,12 @@
 <template>
-  <v-container fluid pa-0>
-    <v-row class="mt-6">
-      <!-- <ProjectSection /> 
-      <PricingSection />
-      <BlogSection />
-    </v-row>
-  </v-container>
-<v-container fluid >
-    <v-row
-      class="mt-6"
-    > 
+  <div>
     <div class="mt-6">
+      <ProjectSection />
       <PricingSection />
       <BlogSection />
       <ServiceSection />
     </div>
-    <!-- </v-row>
-  </v-container> 
-
+  </div>
 </template>
 
 <script>
@@ -28,7 +17,6 @@ import ProjectSection from '@/components/project/ProjectSection'
 
 import ServiceSection from '@/components/service/ServiceSection'
 
-
 export default {
   name: 'home-page',
   components: {
@@ -37,8 +25,7 @@ export default {
 
     ProjectSection,
 
-    ServiceSection
-
+    ServiceSection,
   },
 }
 </script>
