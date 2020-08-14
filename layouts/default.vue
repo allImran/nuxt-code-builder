@@ -7,7 +7,7 @@
       app
     >
       <v-list>
-        <v-list-item v-for="(menu, index) in menus" :key="index">
+        <v-list-item  v-for="(menu, index) in menus" :key="index">
           <v-list-item-action>
             <v-icon left color="secondary">mdi-{{ menu.icon }}</v-icon>
           </v-list-item-action>
@@ -38,6 +38,7 @@
       <v-toolbar-title class="pl-3 pr-12" v-text="title" />
 
       <v-btn
+        @click="goToUrl(menu.url)"
         text
         v-for="(menu, index) in menus"
         :key="index"
@@ -82,27 +83,37 @@ export default {
         {
           title: 'home',
           icon: 'home',
+          url:'/'
         },
         {
           title: 'contact us',
           icon: 'account-box',
+          url:'/contact'
         },
         {
           title: 'blog',
           icon: 'blogger',
+          url:'#'
         },
         {
           title: 'services',
           icon: 'briefcase',
+          url:'#'
         },
         {
           title: 'portfolio',
           icon: 'apps',
+          url:'#'
         },
       ],
 
       title: 'Code Builder IT',
     }
   },
+  methods: {
+    goToUrl(url) {
+      this.$router.push(url)
+    }
+  }
 }
 </script>

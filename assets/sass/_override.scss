@@ -5,3 +5,8 @@ $speed-dial-button-margin: 20px !important;
     bottom: 0px !important;
     right: 0px !important;
 }
+.service-link{
+	.v-image__image{
+		background-size: contain;
+  }
+}

@@ -3,6 +3,7 @@
         cols="12"
     >
     <v-card
+        class="hover"
         :color="item.color"
         dark
         width="100%"
