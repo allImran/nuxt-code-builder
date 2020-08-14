@@ -1,0 +1,43 @@
+.breadcrumb{
+	position: relative;
+	min-height: 200px;
+    background-color: #d81b604a;
+    padding: 2rem 0;
+    background-image: url('/img/breadcrumb.svg');
+    background-size: contain;
+    .content{
+    	@include middle-transformer; /* inside abstracts->mixin */
+    	h3{
+			text-align: center;
+			font-size: 40px;
+			text-transform: capitalize;
+            color: $secondary-color;
+		}
+        ul{
+            padding: 0;
+            text-align: center;
+            li{
+                padding: 0;
+                margin: 0;
+                display: inline-block;
+                text-transform: capitalize;
+                list-style: square;
+                a{
+                    text-decoration: none;
+                    padding:0 5px;
+                    color: $primary-color;
+                    &:hover{
+                        color: $secondary-color;
+                    }
+                }
+                &:after{
+                        content: '/'
+                    }
+                &:last-child:after{
+                        content: '';
+                    }
+            }
+            
+        }
+    }
+}

@@ -10,8 +10,13 @@
 
 @import "components/button";
 @import "components/footer";
+@import "components/breadcrumb";
 @import "components/title";
-@import "components/_pricingTable";
+@import "components/pricingTable";
+@import "components/contact";
+@import "components/service";
+
+@import "pages/contact";
 
 @import "layout/header";
 @import "layout/footer";

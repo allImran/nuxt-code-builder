@@ -1,5 +1,5 @@
 <template>
-    <p class="main-title">{{ text }}</p>
+    <p :style="{textAlign: align}"	 class="main-title">{{ text }}</p>
 </template>
 
 <script>
@@ -8,6 +8,9 @@ export default {
         text: {
             type: String,
             default: 'default title'
+        },
+        align: {
+        	default: 'center'
         }
     }
 }
