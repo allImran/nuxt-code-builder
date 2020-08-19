@@ -2,34 +2,41 @@
   <v-container fluid pa-0>
     <SubTitle :text="subTitle" />
     <Title :text="title" />
-    <!-- <v-row no-gutters class="justify-center align-center">
-      <v-col v-for="(plan, index) in plans" :key="index" xl="4" md="4" sm="4" cols="4">
-        <ProjectComponent />
-      </v-col>
-    </v-row>-->
-    <vueper-slides :visible-slides="3" slide-multiple :slide-ratio="1 / 4">
-      <vueper-slide
-        v-for="(plan, i) in plans"
-        :key="i"
-        :style="'background-color: ' + ['#ff5252', '#42b983'][i % 2]"
-      />
-      <template v-slot:content>
-        <div class="vueperslide__content-wrapper">
-          <div class="vueperslide__title">{{ i.toString() }}</div>
-          <v-img src="https://picsum.photos/200/300"></v-img>
-        </div>
-      </template>
-    </vueper-slides>
+
+    <v-sheet
+      class="mx-auto"
+      elevation="0"
+      max-width="1400"
+      data-aos="slide-right"
+      data-aos-duration="1500"
+    >
+      <v-slide-group v-model="model" center-active show-arrows>
+        <v-slide-item v-for="n in 15" :key="n" v-slot:default="{ active, toggle }">
+          <v-card
+            :color="active ? 'primary' : 'accent'"
+            class="ma-4"
+            height="300"
+            width="400"
+            @click="toggle"
+            elevation="8"
+          >
+            <v-row class="fill-height" align="center" justify="center">
+              <ProjectComponent />
+            </v-row>
+          </v-card>
+        </v-slide-item>
+      </v-slide-group>
+    </v-sheet>
   </v-container>
 </template>
 <script>
 import ProjectComponent from '@/components/project/ProjectComponent'
-import { VueperSlides, VueperSlide } from 'vueperslides'
-import 'vueperslides/dist/vueperslides.css'
+
 export default {
-  components: { ProjectComponent, VueperSlides, VueperSlide },
+  components: { ProjectComponent },
   data() {
     return {
+      model: null,
       title: 'FEATURED PROJECTS',
       subTitle: 'SEE OUR RECENT PROJECTS',
       plans: [
