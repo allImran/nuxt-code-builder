@@ -1,23 +1,23 @@
-@import "abstracts/function";
-@import "abstracts/mixin";
-@import "abstracts/variable";
-@import "override";
+@import 'abstracts/function';
+@import 'abstracts/mixin';
+@import 'abstracts/variable';
+@import 'override';
 
-@import "base/animation";
-@import "base/base";
-@import "base/typography";  
-@import "base/utilities.scss";
+@import 'base/animation';
+@import 'base/base';
+@import 'base/typography';
+@import 'base/utilities.scss';
 
-@import "components/button";
-@import "components/footer";
-@import "components/breadcrumb";
-@import "components/title";
-@import "components/pricingTable";
-@import "components/contact";
-@import "components/service";
+@import 'components/button';
+@import 'components/footer';
+@import 'components/breadcrumb';
+@import 'components/slider';
+@import 'components/title';
+@import 'components/pricingTable';
+@import 'components/contact';
+@import 'components/service';
 
-@import "pages/contact";
+@import 'pages/contact';
 
-@import "layout/header";
-@import "layout/footer";
-
+@import 'layout/header';
+@import 'layout/footer';

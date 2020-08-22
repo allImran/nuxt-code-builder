@@ -1,6 +1,7 @@
 <template>
   <div>
     <div class="mt-6">
+      <SliderSection />
       <ProjectSection />
       <PricingSection />
       <BlogSection />
@@ -10,6 +11,7 @@
 </template>
 
 <script>
+import SliderSection from '@/components/slider/SliderSection'
 import PricingSection from '@/components/pricing/PricingSection'
 import BlogSection from '@/components/blog/BlogSection'
 
@@ -20,6 +22,7 @@ import ServiceSection from '@/components/service/ServiceSection'
 export default {
   name: 'home-page',
   components: {
+    SliderSection,
     PricingSection,
     BlogSection,
 
