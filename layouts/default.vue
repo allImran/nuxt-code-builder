@@ -93,7 +93,7 @@ export default {
         {
           title: 'blog',
           icon: 'blogger',
-          url:'#'
+          url:'/blog'
         },
         {
           title: 'services',
