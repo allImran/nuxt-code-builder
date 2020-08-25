@@ -17,7 +17,7 @@
               class="transition-fast-in-fast-out blue-grey darken-4 v-card--reveal white--text"
               style="height: 100%; z-index:9"
             >
-              <v-card-subtitle class="pb-0">Number 10</v-card-subtitle>
+              <v-card-subtitle class="pb-0 white--text">Number 10 | Coading | 12 minuts read</v-card-subtitle>
               <v-card-title class="headline">{{item.title}}</v-card-title>
               
                <v-card-text>
@@ -52,9 +52,8 @@
           <v-card-text >
             <div class="overlay">
                 <div :class="[{displayNone:hover}, flex]">
-                    
-                    <v-card-title class="text-h4 pt-0 white--text">{{ item.title }}</v-card-title>
-                    <v-card-subtitle class="pb-0 white--text">Number 10 | Coading | 12 minuts read</v-card-subtitle>
+                  <v-card-title class="text-h3 mb-5 pt-0 card-blog-title">{{ item.title }}</v-card-title>
+                  <v-card-subtitle class="card-blog-subtitle">Number 10 | Coading | 12 minuts read</v-card-subtitle>
                 </div>
             </div>
         </v-card-text>
