@@ -7,29 +7,28 @@
       >
         <v-img
           :aspect-ratio="3/3"
-          src="https://cdn.vuetifyjs.com/images/cards/kitchen.png"
+          :src="item.url"
           class="align-end"
         >
           
           <v-expand-transition>
-            
             <div
               v-if="hover"
               class="transition-fast-in-fast-out blue-grey darken-4 v-card--reveal white--text"
               style="height: 100%; z-index:9"
             >
               <v-card-subtitle class="pb-0">Number 10</v-card-subtitle>
-              <v-card-title class="headline">Top 10 Australian beaches</v-card-title>
+              <v-card-title class="headline">{{item.title}}</v-card-title>
               
                <v-card-text>
-                <div>loreem ipdfdf dk enn vj djd fjdkfjd jkd fjdjfd kkkjkjdfkdjf k dkjf this is o</div>
+                <div><span class=""> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.</span> </div>
               </v-card-text>
               <v-card-actions>
                   <v-btn
                     left
                     absolute
                     bottom
-                    color="purple"
+                    color="#fff"
                     text
                   >
                     Read More
@@ -50,17 +49,13 @@
             </div>
           </v-expand-transition>
           
-          <v-card-text style="width: 100%">
-<div class="overlay">
-            <div id="mark" :class="[{displayNone:hover}, flex]">
-                <!-- <div class="d-flex flex-column justify-end"> -->
-                    <v-card-subtitle class="pb-0 white--text">Number 10</v-card-subtitle>
-                    <v-card-title class="headline white--text">Top 10 Australian beaches</v-card-title>
-                    <v-card-text>
-                        <div class="white--text">loreem ipdfdf dk enn vj djd fjdkfjd jkd fjdjfd kkkjkjdfkdjf k dkjf this is o</div>
-                    </v-card-text>
-                <!-- </div> -->
-            </div>
+          <v-card-text >
+            <div class="overlay">
+                <div :class="[{displayNone:hover}, flex]">
+                    
+                    <v-card-title class="text-h4 pt-0 white--text">{{ item.title }}</v-card-title>
+                    <v-card-subtitle class="pb-0 white--text">Number 10 | Coading | 12 minuts read</v-card-subtitle>
+                </div>
             </div>
         </v-card-text>
         
@@ -72,30 +67,25 @@
 <script>
 export default {
     data () {
-        return {
-            flex: 'd-flex flex-column justify-end'
-        }
+      return {
+          flex: 'd-flex flex-column justify-end full-height'
+      }
+    },
+    props: {
+      item: {
+        required: true
+      }
     }
 }
 </script>
 <style lang="scss" scoped>
-.v-card--reveal {
-align-items: center;
-bottom: 0;
-justify-content: center;
-opacity: .8;
-position: absolute;
-width: 100%;
-}
-.displayNone{
-  margin-top: -9000px;
-}
-.overlay{
+  .v-card--reveal {
+  align-items: center;
+  bottom: 0;
+  justify-content: center;
+  opacity: .8;
   position: absolute;
-  height: 100%;
   width: 100%;
-  background-color: rgba(12, 0, 0, 0.233);
-  top:0;
-  left: 0;
 }
+
 </style>

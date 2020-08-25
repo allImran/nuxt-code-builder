@@ -8,14 +8,15 @@
 @import 'base/typography';
 @import 'base/utilities.scss';
 
-@import 'components/button';
-@import 'components/footer';
-@import 'components/breadcrumb';
+@import "components/button";
+@import "components/footer";
+@import "components/breadcrumb";
+@import "components/title";
+@import "components/pricingTable";
+@import "components/contact";
+@import "components/service";
+@import "components/blog";
 @import 'components/slider';
-@import 'components/title';
-@import 'components/pricingTable';
-@import 'components/contact';
-@import 'components/service';
 
 @import 'pages/contact';
 
