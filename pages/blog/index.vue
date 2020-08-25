@@ -18,7 +18,14 @@
 						</template>
 					</v-row>
 				</v-col>
-				<v-col cols="12" md="3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium nesciunt atque ipsa similique pariatur aliquam libero necessitatibus ut sit voluptatem. Officiis nam excepturi eaque labore sequi, amet veritatis reprehenderit nulla?</v-col>
+				<v-col cols="12" md="3">
+					<Search 
+						@searching="searching"
+					/>
+					<CategoryList
+						:items="categories"
+					/>
+				</v-col>
 			</v-row>
 		</v-container>
 		<v-overlay color="#fff" :value="loading">
@@ -31,9 +38,11 @@
 	import Breadcrumb from '@/components/Breadcrumb'
 	import BlogListHover from '@/components/blog/BlogListHover'
 	import Observer from '@/components/Observer'	
+	import Search from '@/components/SearchComponent'	
+	import CategoryList from '@/components/CategoryList'	
 	export default {
 		name: 'blog',
-		components: {Breadcrumb, BlogListHover, Observer},
+		components: {Breadcrumb, BlogListHover, Observer, Search, CategoryList},
 		data: () => ({
 			pageTitle: 'blog',
 			breadCrumbData: [
@@ -42,7 +51,14 @@
 			],
 			items: [],
 			loading: false,
-			 page: 1
+			page: 1,
+			categories: [
+				{id: 1, name:'programming', link: '#'},
+				{id: 2, name:'Vue js', link: '#'},
+				{id: 3, name:'Nuxt', link: '#'},
+				{id: 4, name:'Trcks', link: '#'},
+				{id: 5, name:'Technology', link: '#'},
+			],
 		}),
 		methods: {
 			async intersecting(){
@@ -52,6 +68,9 @@
 				this.items = [...this.items, ...items];
 				this.page++
 				this.loading = false
+			},
+			searching(key){
+				console.log(key);
 			}
 		}
 	}

@@ -1,0 +1,21 @@
+.category-list-area{
+	.category-list-title{
+		font-size: $md-text-size;
+		margin-bottom: 10px;
+		display: block;
+		color: $primary-color;
+	}
+	li{
+		color: $secondary-color;
+		a{
+			text-transform: capitalize;
+			text-decoration: none;
+			color: $secondary-color;
+			font-size: $sm-text-size; 
+			transition: .3s;
+			&:hover{
+				color: $primary-color;
+			}
+		}
+	}
+}
