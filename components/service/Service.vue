@@ -1,41 +1,33 @@
 <template>
-    <v-col
-        cols="12"
-    >
+  <v-hover v-slot:default="{ hover }">
     <v-card
-        class="hover"
-        :color="item.color"
-        dark
-        width="100%"
-        >
-            <div class="d-flex flex-no-wrap justify-left">
-                <v-avatar
-                    class="ma-3"
-                    size="125"
-                    tile
-                >
-                    <v-img :src="item.src"></v-img>
-                </v-avatar>
-                <div>
-                    <v-card-title
-                    class="headline"
-                    v-text="item.title"
-                    ></v-card-title>
+      max-width="344"
+      class="mx-auto rounded-xl pa-4 transition-fast-in-fast-out"
+      :elevation="hover ? 12 : 4"
+      :class="{ 'on-hover': hover }"
+    >
+      <v-list-item>
+        <v-list-item-content>
+          <v-list-item-title class="headline primary--text" v-text="item.title"></v-list-item-title>
+        </v-list-item-content>
+      </v-list-item>
 
-                    <v-card-subtitle v-text="item.artist"></v-card-subtitle>
-                </div>
-            </div>
-        </v-card>
-    </v-col>
+      <v-img :src="item.src" contain height="194"></v-img>
+
+      <v-card-text class="secondary--text" v-text="item.artist"></v-card-text>
+    </v-card>
+  </v-hover>
 </template>
 
 <script>
 export default {
-    name: 'service-component',
-    props: {
-        item: {
-            required: true
-        }
-    }
+  name: 'service-component',
+  props: {
+    item: {
+      required: true,
+    },
+  },
 }
 </script>
+<style lang="scss" scoped>
+</style>

@@ -64,7 +64,7 @@ export default {
   },
 }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .price-table:not(.on-hover) {
   opacity: 0.9;
 }
