@@ -5,7 +5,16 @@
     <v-row justify="center">
       <v-col cols="12" sm="12" lg="11" xl="10">
         <v-row dense justify="center">
-          <v-col cols="12" sm="6" lg="3" v-for="(item, i) in items" :key="i" class="ma-4">
+          <v-col
+            cols="12"
+            sm="6"
+            lg="3"
+            v-for="(item, i) in items"
+            :key="i"
+            class="ma-4"
+            data-aos="flip-left"
+            data-aos-duration="1500"
+          >
             <Service :item="item" />
           </v-col>
         </v-row>
