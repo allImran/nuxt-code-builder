@@ -17,3 +17,33 @@
   .full-height{
     height: 100%;
   }
+
+  .single-blog{
+    .blog-title{
+      color: $primary-color;
+    }
+    .blog-meta{
+      color: $secondary-color;
+      margin-top: -10px;
+    }
+    .blog-img{
+      img{
+        max-width: 99%;
+        display: block;
+        border-radius: 5px;
+      }
+      
+    }
+  }
+
+  .recent-blog{
+    .date{
+      font-size: 12px;
+      color: $secondary-color;
+    }
+    .rtitle{
+      font-size: $sm-text-size !important;
+      color: $primary-color !important;
+    }
+  }
+  
