@@ -11,7 +11,6 @@
 						<template v-for="(item, index) in items">
 							<v-col :key="index" cols="12" md="6">
 								<BlogListHover
-									
 									:item="item"
 								/>
 							</v-col>
