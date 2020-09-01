@@ -1,21 +1,13 @@
 <template>
   <v-app>
-    <v-navigation-drawer
-      v-model="drawer"
-      temporary
-      class="hidden-sm-and-up"
-      app
-    >
+    <v-navigation-drawer v-model="drawer" temporary class="hidden-sm-and-up" app>
       <v-list>
-        <v-list-item  v-for="(menu, index) in menus" :key="index">
+        <v-list-item v-for="(menu, index) in menus" :key="index">
           <v-list-item-action>
             <v-icon left color="secondary">mdi-{{ menu.icon }}</v-icon>
           </v-list-item-action>
           <v-list-item-content>
-            <v-list-item-title
-              class="secondary--text text-capitalize"
-              v-text="menu.title"
-            />
+            <v-list-item-title class="secondary--text text-capitalize" v-text="menu.title" />
           </v-list-item-content>
         </v-list-item>
       </v-list>
@@ -28,10 +20,7 @@
       height="100"
       class="pa-xl-6 pa-lg-5 pa-md-4 pa-sm-3 pa-2"
     >
-      <v-app-bar-nav-icon
-        class="hidden-sm-and-up"
-        @click.stop="drawer = !drawer"
-      />
+      <v-app-bar-nav-icon class="hidden-sm-and-up" @click.stop="drawer = !drawer" />
 
       <v-img src="/logo@2x.png" max-width="40"></v-img>
 
@@ -51,7 +40,7 @@
     </v-app-bar>
     <v-main>
       <!-- <v-container fluid> -->
-        <nuxt />
+      <nuxt />
       <!-- </v-container> -->
     </v-main>
 
@@ -83,27 +72,27 @@ export default {
         {
           title: 'home',
           icon: 'home',
-          url:'/'
+          url: '/',
         },
         {
           title: 'contact us',
           icon: 'account-box',
-          url:'/contact'
+          url: '/contact',
         },
         {
           title: 'blog',
           icon: 'blogger',
-          url:'/blog'
+          url: '/blog',
         },
         {
           title: 'services',
           icon: 'briefcase',
-          url:'#'
+          url: '/services',
         },
         {
           title: 'portfolio',
           icon: 'apps',
-          url:'#'
+          url: '#',
         },
       ],
 
@@ -113,7 +102,7 @@ export default {
   methods: {
     goToUrl(url) {
       this.$router.push(url)
-    }
-  }
+    },
+  },
 }
 </script>
