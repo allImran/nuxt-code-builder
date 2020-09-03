@@ -13,26 +13,29 @@
         <div class="display-1 primary--text">
           We are here to help as
         </div>
-        <vue-typer
-          :text="[
-            'Arya Stark',
-            'Jon Snow',
-            'Daenerys Targaryen',
-            'Melisandre',
-            'Tyrion Lannister',
-          ]"
-          :repeat="Infinity"
-          :shuffle="false"
-          initial-action="typing"
-          :pre-type-delay="100"
-          :type-delay="100"
-          :pre-erase-delay="4000"
-          :erase-delay="100"
-          erase-style="clear"
-          :erase-on-complete="false"
-          caret-animation="blink"
-        ></vue-typer
-      ></v-col>
+            
+        <client-only>
+          <vue-typer
+            :text="[
+              'Arya Stark',
+              'Jon Snow',
+              'Daenerys Targaryen',
+              'Melisandre',
+              'Tyrion Lannister',
+            ]"
+            :repeat="Infinity"
+            :shuffle="false"
+            initial-action="typing"
+            :pre-type-delay="100"
+            :type-delay="100"
+            :pre-erase-delay="4000"
+            :erase-delay="100"
+            erase-style="clear"
+            :erase-on-complete="false"
+            caret-animation="blink">
+          </vue-typer>
+        </client-only>
+      </v-col>
       <v-col cols="4" justify="center" align="left">
         <Slider :svgList="leftList" />
       </v-col>
