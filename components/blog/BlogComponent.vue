@@ -32,7 +32,9 @@
           
         >
           <!-- <v-icon>mdi-share-variant</v-icon> -->
-          <SpeedDial />
+          <client-only>
+            <SpeedDial />
+          </client-only>
         </v-btn>
       </v-card-actions>
   

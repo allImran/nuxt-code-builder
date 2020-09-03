@@ -14,9 +14,7 @@
 import SliderSection from '@/components/slider/SliderSection'
 import PricingSection from '@/components/pricing/PricingSection'
 import BlogSection from '@/components/blog/BlogSection'
-
 import ProjectSection from '@/components/project/ProjectSection'
-
 import ServiceSection from '@/components/service/ServiceSection'
 
 export default {
