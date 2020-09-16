@@ -4,25 +4,28 @@
     <v-container fluid pa-0>
       <v-row no-gutters>
         <v-col cols="12">
-          <v-card color="#d81b60" flat tile>
-            <v-row no-gutters justify="center" align="center">
-              <v-col
-                sm="12"
-                lg="4"
-                xl="3"
-                class="text-center text-sm-center text-lg-left mt-5 mt-sm-10 mt-lg-0"
-              >
-                <div class="text-sm-h4 text-lg-h4 text-h6 white--text">We Develop Custom Websites</div>
-                <div
-                  class="text-sm-h5 text-lg-h5 text-subtitle-1 white--text"
-                >We ensure best conversions for our clients.</div>
-              </v-col>
-              <v-col sm="12" lg="5" xl="5" class="pa-8">
-                <v-card color="#d81b60" flat>
-                  <v-img src="/img/service_slide.svg" contain></v-img>
-                </v-card>
-              </v-col>
-            </v-row>
+          <v-card flat tile>
+            <div class="polygon">
+              <v-row no-gutters justify="center" align="center">
+                <v-col
+                  sm="12"
+                  lg="4"
+                  xl="3"
+                  class="text-center text-sm-center text-lg-left mt-5 mt-sm-10 mt-lg-0"
+                >
+                  <div class="text-sm-h4 text-lg-h4 text-h6 white--text">We Develop Custom Websites</div>
+                  <div
+                    class="text-sm-h5 text-lg-h5 text-subtitle-1 white--text"
+                  >We ensure best conversions for our clients.</div>
+                </v-col>
+                <v-col sm="12" lg="5" xl="5" class="pa-8">
+                  <v-card color="#d81b60" flat>
+                    <v-img src="/img/service_slide.svg" contain></v-img>
+                  </v-card>
+                </v-col>
+              </v-row>
+            </div>
+            
           </v-card>
         </v-col>
       </v-row>
@@ -101,3 +104,14 @@ export default {
   },
 }
 </script>
+
+<style lang="scss">
+  .polygon{
+    background-color: #d81b60;
+    // clip-path: polygon(50% 3%, 100% 0, 100% 60%, 100% 100%, 49% 92%, 0 100%, 0 0);
+    clip-path: polygon(50% 0, 100% 9%, 100% 60%, 100% 100%, 50% 90%, 0 100%, 0 9%);
+    // clip-path: polygon(50% 0, 100% 5%, 100% 60%, 100% 100%, 50% 100%, 0 100%, 0 5%);
+    // clip-path: polygon(50% 0, 100% 9%, 100% 60%, 100% 100%, 50% 100%, 0 100%, 0 9%);
+    // clip-path: polygon(50% 0, 100% 9%, 100% 60%, 100% 91%, 50% 100%, 0 91%, 0 9%);
+  }
+</style>

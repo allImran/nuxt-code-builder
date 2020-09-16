@@ -16,7 +16,7 @@
 		<div class="contact-form">
 			<v-container>
 				<v-row>
-					<v-col cols="12" md="6" sm="6">
+					<v-col cols="12" md="6" sm="12">
 						<div class="contact-left pa-md-5">
 							<SubTitle
 							align="left"
@@ -44,7 +44,7 @@
 							</div>
 						</div>
 					</v-col>
-					<v-col cols="12" md="6" sm="6">
+					<v-col cols="12" md="6" sm="12">
 						<div class="contact-right">
 							<Title
 								align="left"

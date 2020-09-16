@@ -2,6 +2,7 @@
     <v-col
         class="recent-blog"
         cols="12"
+        xl="12"
     >
     <v-card
         class="hover"

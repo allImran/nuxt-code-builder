@@ -52,7 +52,7 @@
           <v-card-text >
             <div class="overlay">
                 <div :class="[{displayNone:hover}, flex]">
-                  <v-card-title class="text-h3 mb-5 pt-0 card-blog-title">{{ item.title }}</v-card-title>
+                  <v-card-title class="text-md-h4 text-xs-h5 text-sm-h4  mb-5 pt-0 card-blog-title">{{ item.title }}</v-card-title>
                   <v-card-subtitle class="card-blog-subtitle">Number 10 | Coading | 12 minuts read</v-card-subtitle>
                 </div>
             </div>
