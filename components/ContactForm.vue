@@ -1,13 +1,13 @@
 <template>
 	<div>
 		<v-row>
-			<v-col col="6">
+			<v-col cols="12" md="6">
 			 <v-text-field
 	            label="First name"
 	            required
 	          ></v-text-field>
 			</v-col>
-			<v-col col="6">
+			<v-col col="12" md="6">
 			 <v-text-field
 	            label="First name"
 	            required
@@ -15,13 +15,13 @@
 			</v-col>
 		</v-row>
 		<v-row>
-			<v-col col="6">
+			<v-col col="12" md="6">
 			 <v-text-field
 	            label="First name"
 	            required
 	          ></v-text-field>
 			</v-col>
-			<v-col col="6">
+			<v-col col="12" md="6">
 			 <v-text-field
 	            label="First name"
 	            required

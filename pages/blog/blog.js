@@ -11,19 +11,19 @@ export default {
     recent: [
         {
           color: '#fff',
-          src: 'img/service/responsive.svg',
+          src: '/img/service/responsive.svg',
           title: 'Responsive Webdesign',
           date: 'August 19',
         },
         {
           color: '#fff',
-          src: 'img/service/seo.svg',
+          src: '/img/service/seo.svg',
           title: 'SEO and all other support for',
           date: 'September 12',
         },
         {
           color: '#fff',
-          src: 'img/service/website.svg',
+          src: '/img/service/website.svg',
           title: 'Website for your business',
           date: 'August 2',
         },
