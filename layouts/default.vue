@@ -1,28 +1,43 @@
 <template>
   <v-app>
-    <v-navigation-drawer v-model="drawer" temporary class="hidden-sm-and-up" app>
+    <v-navigation-drawer
+      v-model="drawer"
+      temporary
+      class="hidden-sm-and-up"
+      app
+    >
       <v-list>
-        <v-list-item v-for="(menu, index) in menus" :key="index">
+        <v-list-item v-for="(menu, index) in menus" :key="index" :to="menu.url">
           <v-list-item-action>
             <v-icon left color="secondary">mdi-{{ menu.icon }}</v-icon>
           </v-list-item-action>
           <v-list-item-content>
-            <v-list-item-title class="secondary--text text-capitalize" v-text="menu.title" />
+            <v-list-item-title
+              class="secondary--text text-capitalize"
+              v-text="menu.title"
+            />
           </v-list-item-content>
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-app-bar fixed app elevation="0" color="#fff" class="pl-lg-6 pl-sm-5 pl-0" height="80">
+    <v-app-bar
+      fixed
+      app
+      elevation="0"
+      color="#fff"
+      class="pl-lg-6 pl-sm-5 pl-0 pb-sm-0"
+      height="80"
+    >
       <v-app-bar-nav-icon
-        class="hidden-sm-and-up mr-2"
+        class="hidden-sm-and-up mr-2 ml-2 mt-4"
         color="primary"
         @click.stop="drawer = !drawer"
       />
-      <nuxt-link to="/">
+      <nuxt-link to="/" class="mt-4">
         <v-img src="/logo@2x.png" max-width="40"></v-img>
       </nuxt-link>
       <nuxt-link to="/" tag="v-toolbar-title">
-        <v-toolbar-title class="pl-3 pr-12 primary--text" v-text="title" />
+        <v-toolbar-title class="pl-3 pr-12 primary--text mt-4" v-text="title" />
       </nuxt-link>
 
       <v-btn

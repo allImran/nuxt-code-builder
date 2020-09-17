@@ -3,7 +3,7 @@
     <!-- <p><a @click="prev">Previous</a> || <a @click="next">Next</a></p> -->
     <div v-for="number in [currentNumber]" :key="number" transition="fade">
       <v-img
-        class="trans"
+        class="trans mx-auto"
         :src="svgList[currentNumber]"
         contain
         width="400"

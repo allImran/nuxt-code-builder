@@ -1,5 +1,5 @@
 <template>
-  <v-container  fluid>
+  <v-container fluid>
     <SubTitle :text="subTitle" />
     <Title :text="title" />
 
@@ -7,8 +7,6 @@
       <v-col
         v-for="(plan, index) in plans"
         :key="index"
-        :data-aos="plan.slide"
-        data-aos-duration="1500"
         lg="4"
         md="8"
         sm="8"
