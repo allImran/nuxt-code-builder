@@ -3,20 +3,18 @@
     <SubTitle :text="subTitle" />
     <Title :text="title" />
 
-    <v-sheet
-      class="mx-auto"
-      elevation="0"
-      max-width="1400"
-      data-aos="slide-right"
-      data-aos-duration="1500"
-    >
+    <v-sheet class="mx-auto" elevation="0" max-width="1400">
       <v-slide-group v-model="model" center-active show-arrows>
-        <v-slide-item v-for="n in 15" :key="n" v-slot:default="{ active, toggle }">
+        <v-slide-item
+          v-for="n in 15"
+          :key="n"
+          v-slot:default="{ active, toggle }"
+        >
           <v-card
             :color="active ? 'primary' : 'accent'"
             class="ma-4"
             height="300"
-            width="400"
+            max-width="300"
             @click="toggle"
             elevation="8"
           >

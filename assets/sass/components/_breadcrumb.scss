@@ -1,9 +1,13 @@
 .breadcrumb {
   position: relative;
   min-height: 200px;
-  background-color: #d81b604a;
+  background-color: #fbe9ef;
   padding: 2rem 0;
-  background-image: url('/img/breadcrumb.svg');
+  background-image: url('/img/breadcrumb_oposite.svg'),
+    url('/img/breadcrumb.svg');
+
+  background-position: right bottom, left bottom;
+  background-repeat: no-repeat, no-repeat;
   background-size: contain;
   .content {
     @include middle-transformer; /* inside abstracts->mixin */
