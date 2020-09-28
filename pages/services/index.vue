@@ -26,9 +26,22 @@
 <script>
 import Service from '@/components/service/Service'
 import Breadcrumb from '@/components/Breadcrumb'
+import {setMetadata} from '@/service/metaInfo'
 export default {
   name: 'service',
   components: { Service, Breadcrumb },
+  head() {
+    return {
+      title: this.metaData.title,
+      meta: [
+        {
+          hid: 'description',
+          name: this.metaData.description,
+          content: 'Home page description'
+        }
+      ]
+    }
+  },
   data() {
     return {
       pageTitle: 'Services',
@@ -82,6 +95,9 @@ export default {
         },
       ],
     }
+  }, // end of data
+  created() {
+    this.metaData = setMetadata(this.$route.fullPath);
   },
 }
 </script>
