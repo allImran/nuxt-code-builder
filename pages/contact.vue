@@ -12,6 +12,7 @@
 				:text="sectionDescription" 
 			/>
 		</v-container>
+		</v-btn>
 		<div class="contact-image"></div>
 		<div class="contact-form">
 			<v-container>
@@ -65,9 +66,25 @@
 	import ContactForm from '@/components/ContactForm'
 	import SectionDescription from '@/components/SectionDescription'
 	import Breadcrumb from '@/components/Breadcrumb'
+	import {setMetadata} from '@/service/metaInfo'
 	export default {
 		name: 'contact',
 		components: {Title, SectionDescription,Breadcrumb, SubTitle, ContactForm},
+		created() {
+		    this.metaData = setMetadata(this.$route.fullPath);
+		},
+		head() {
+		    return {
+		      title: this.metaData.title,
+		      meta: [
+		        {
+		          hid: 'description',
+		          name: this.metaData.description,
+		          content: 'Home page description'
+		        }
+		      ]
+		    }
+		  },
 		data () {
 			return {
 				title:'Find the Perfect Solution for Your Business',
@@ -82,6 +99,7 @@
 				contactFormTitle: 'Feel free to send messge',
 
 			}
-		}
+		},//end of data
+
 	}
 </script>

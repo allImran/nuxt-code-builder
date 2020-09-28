@@ -41,9 +41,22 @@ import RecentBlog from '@/components/blog/RecentBlog'
 import Search from '@/components/SearchComponent'	
 import CategoryList from '@/components/CategoryList'
 import blog from './blog'
+import {setMetadata} from '@/service/metaInfo'
 export default {
 	name: 'single-blog-page',
 	components: {SingleBlog, Breadcrumb, Search, CategoryList, RecentBlog},
+	head() {
+    return {
+      title: this.metaData.title,
+	      meta: [
+	        {
+	          hid: 'description',
+	          // name: this.metaData.description,
+	          content: 'Home page description'
+	        }
+	      ]
+	    }
+	  },
 	data: () => ({
 		blog: blog.blog,
 		recentBlog: blog.recent,
@@ -62,9 +75,12 @@ export default {
 		],
 	}),
 	methods: {
-			searching(key){
-				console.log(key);
-			}
+		searching(key){
+			console.log(key);
 		}
+	}, //end of methods
+	created() {
+    	this.metaData = setMetadata(this.$route.fullPath);
+    },
 }
 </script>
