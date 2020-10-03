@@ -17,13 +17,13 @@
         class="align-self-center text-center"
       >
         <div class="display-1 primary--text">
-          We are here to help as
+          Hire Professionals for
         </div>
 
         <client-only>
           <vue-typer
             :text="[
-              'Arya Stark',
+              'software solutions',
               'Jon Snow',
               'Daenerys Targaryen',
               'Melisandre',
