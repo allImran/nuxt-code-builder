@@ -51,7 +51,9 @@
 								align="left"
 								:text="contactFormTitle"
 							/>
-							<ContactForm />
+							<ContactForm 
+								@sendMail="sendMail"
+							/>
 						</div>
 					</v-col>
 				</v-row>
@@ -61,6 +63,7 @@
 </template>
 
 <script>
+	import {mapActions} from 'vuex'
 	import Title from '@/components/Title'
 	import SubTitle from '@/components/SubTitle'
 	import ContactForm from '@/components/ContactForm'
@@ -69,7 +72,13 @@
 	import {setMetadata} from '@/service/metaInfo'
 	export default {
 		name: 'contact',
-		components: {Title, SectionDescription,Breadcrumb, SubTitle, ContactForm},
+		components: {
+			Title, 
+			SectionDescription,
+			Breadcrumb, 
+			SubTitle, 
+			ContactForm
+		},
 		created() {
 		    this.metaData = setMetadata(this.$route.fullPath);
 		},
@@ -100,6 +109,14 @@
 
 			}
 		},//end of data
-
+		methods: {
+			...mapActions({
+				send: 'contact/ACT_SEND_MAIL'
+			}),
+			sendMail(mailOptions){
+				console.log(mailOptions);
+				this.send(mailOptions)
+			}
+		}
 	}
 </script>
