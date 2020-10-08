@@ -37,6 +37,10 @@ export default {
       },
     ],
   },
+
+  serverMiddleware: [
+    '~/plugins/mail'
+  ],
   /*
    ** Global CSS
    */
@@ -47,7 +51,6 @@ export default {
    */
   plugins: [
     { src: '@/plugins/aos', ssr: false },
-
     { src: '@/plugins/vue-typer.client.js', ssr: false },
   ],
 
@@ -76,7 +79,9 @@ export default {
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
-  axios: {},
+  axios: {
+    baseURL: 'http://127.0.0.1:3000'
+  },
   /*
    ** vuetify module configuration
    ** https://github.com/nuxt-community/vuetify-module

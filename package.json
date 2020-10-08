@@ -16,7 +16,9 @@
     "@nuxtjs/axios": "^5.11.0",
     "@nuxtjs/pwa": "^3.0.0-beta.20",
     "aos": "^2.3.4",
+    "dotenv": "^8.2.0",
     "lodash": "^4.17.20",
+    "nodemailer": "^6.4.13",
     "nuxt": "^2.13.0",
     "vue-typer": "^1.2.0"
   },
