@@ -36,9 +36,9 @@ export default {
         {
           color: '#880e4fb8',
           src: 'img/service/responsive.svg',
-          title: 'Responsive Webdesign',
+          title: 'Web Application',
           artist:
-            'Responsive web design is an approach to web design that makes web pages render well on a variety of devices and window or screen sizes.Responsive web design is an approach to web design. ',
+            'Developing a successful digital product is a complex process that consists of answering the market’s and users’ needs, applying the right tech solutions as well as creating a secure and stable app that.',
         },
         {
           color: '#1f7087a8',
