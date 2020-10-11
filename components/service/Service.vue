@@ -5,11 +5,14 @@
       class="mx-auto rounded-xl pa-4 transition-fast-in-fast-out"
       :elevation="hover ? 12 : 4"
       :class="{ 'on-hover': hover }"
-      to="/services/web-development"
+      :to="item.link"
     >
       <v-list-item>
         <v-list-item-content>
-          <v-list-item-title class="headline primary--text" v-text="item.title"></v-list-item-title>
+          <v-list-item-title
+            class="headline primary--text"
+            v-text="item.title"
+          ></v-list-item-title>
         </v-list-item-content>
       </v-list-item>
 

@@ -9,7 +9,7 @@
               cols="12"
               sm="6"
               lg="3"
-              v-for="(item, i) in items"
+              v-for="(item, i) in services"
               :key="i"
               class="ma-4"
               data-aos="flip-left"
@@ -26,7 +26,9 @@
 <script>
 import Service from '@/components/service/Service'
 import Breadcrumb from '@/components/Breadcrumb'
-import {setMetadata} from '@/service/metaInfo'
+import { setMetadata } from '@/service/metaInfo'
+
+import serviceData from './service'
 export default {
   name: 'service',
   components: { Service, Breadcrumb },
@@ -37,9 +39,9 @@ export default {
         {
           hid: 'description',
           name: this.metaData.description,
-          content: 'Home page description'
-        }
-      ]
+          content: 'Home page description',
+        },
+      ],
     }
   },
   data() {
@@ -49,55 +51,11 @@ export default {
         { title: 'Home', url: '/' },
         { title: 'Services', url: '#' },
       ],
-
-      items: [
-        {
-          color: '#880e4fb8',
-          src: 'img/service/responsive.svg',
-          title: 'Responsive Webdesign',
-          artist:
-            'Responsive web design is an approach to web design that makes web pages render well on a variety of devices and window or screen sizes.Responsive web design is an approach to web design. ',
-        },
-        {
-          color: '#1f7087a8',
-          src: 'img/service/seo.svg',
-          title: 'SEO',
-          artist:
-            'Search engine optimization is the process of growing the quality and quantity of website traffic by increasing the visibility of a website or a web page to users of a web search engine.',
-        },
-        {
-          color: '#880e4fb8',
-          src: 'img/service/website.svg',
-          title: 'Website',
-          artist:
-            'Search engine optimization is the process of growing the quality and quantity of website traffic by increasing the visibility of a website or a web page to users of a web search engine.',
-        },
-        {
-          color: '#880e4fb8',
-          src: 'img/service/website.svg',
-          title: 'Website',
-          artist:
-            'Search engine optimization is the process of growing the quality and quantity of website traffic by increasing the visibility of a website or a web page to users of a web search engine.',
-        },
-        {
-          color: '#1f7087a8',
-          src: 'img/service/seo.svg',
-          title: 'SEO',
-          artist:
-            'Search engine optimization is the process of growing the quality and quantity of website traffic by increasing the visibility of a website or a web page to users of a web search engine.',
-        },
-        {
-          color: '#880e4fb8',
-          src: 'img/service/website.svg',
-          title: 'Website',
-          artist:
-            'Search engine optimization is the process of growing the quality and quantity of website traffic by increasing the visibility of a website or a web page to users of a web search engine.',
-        },
-      ],
+      services: serviceData.items,
     }
   }, // end of data
   created() {
-    this.metaData = setMetadata(this.$route.fullPath);
+    this.metaData = setMetadata(this.$route.fullPath)
   },
 }
 </script>
