@@ -14,12 +14,12 @@
                   class="text-center text-sm-center text-lg-left mt-5 mt-sm-10 mt-lg-0"
                 >
                   <div class="text-sm-h4 text-lg-h4 text-h6 white--text">
-                    Moobile
+                    ERP
                   </div>
                   <div
                     class="text-sm-h5 text-lg-h5 text-subtitle-1 white--text"
                   >
-                    We ensure best conversions for our clients.
+                    WE ENSURE THE BEST CONVERSION FOR OUR CLIENTS
                   </div>
                 </v-col>
                 <v-col sm="12" lg="5" xl="5" class="pa-8 pa-xl-12">
@@ -40,19 +40,12 @@
     <v-container class="max-view">
       <v-row justify-lg="space-around" class="my-12 py-6">
         <v-col cols="12" sm="6" lg="6" align-self="center">
-          <div class="text-h4 py-3">STARTUP-CENTRIC APPROACH</div>
+          <div class="text-h4 py-3">ERP SERVICES</div>
           <div class="text-subtitle-1 py-2">
-            In most cases, startups have tight budgets and poor vision of their
-            idea assessment and implementation. They need some small business IT
-            support services to be able to start their commercial operations and
-            initiate profit inflow.
+            Your ERP system is where all your data goes and then is distributed and helps to organize the chaos. JavaScript Object Notation or JSON can help make the organization of your data easier by delivering data in a format that is easier to digest. Plus, it requires very little coding experience.
           </div>
           <div class="text-subtitle-1 py-2">
-            DIGIS IT support for startups is targeted to particularly resolve
-            these issues. We can provide individual developers to augment the
-            Client’s project team or fully manned dedicated teams to go ahead
-            with the whole project. For this purpose, we have elaborated and
-            strictly follow our startup-centric approach.
+            JSON is a very common data format. It’s an open standard file format and data interchange format which organizes data into readable text, which is then used to transit and store data objects. Using this format, APIs are able to communicate with other systems, including Microsoft CRM, Business Central, and Dynamics 365. The Parse JSON tool allows you to interpret the data with whatever language you’re using. For example, when you use Parse JSON in Power Automate, raw data is changed into values, which are then used as content for your dynamic flow.
           </div>
         </v-col>
         <v-col cols="12" sm="6" lg="5">
@@ -81,36 +74,10 @@
         </v-col>
       </v-row>
       <v-row justify-lg="space-around" class="my-12 py-6">
-        <v-col cols="12" sm="6" lg="6" align-self="center">
-          <div class="text-h4 py-3">STARTUP-CENTRIC APPROACH</div>
-          <div class="text-subtitle-1 py-2">
-            In most cases, startups have tight budgets and poor vision of their
-            idea assessment and implementation. They need some small business IT
-            support services to be able to start their commercial operations and
-            initiate profit inflow.
-          </div>
-          <div class="text-h6 py-2" v-for="n in 8" :key="n">
-            <v-icon color="primary" left>mdi-check-circle-outline</v-icon
-            >Origination of the Idea
-          </div>
-        </v-col>
-        <v-col cols="12" sm="6" lg="6" align-self="center">
-          <v-img src="/img/single_service/support.svg" contain></v-img>
-        </v-col>
+        
       </v-row>
       <v-row justify-lg="space-between" class="my-12 py-6">
-        <v-col cols="12" sm="6" lg="5" align-self="center">
-          <v-img src="/img/single_service/success.svg" contain></v-img>
-        </v-col>
-        <v-col cols="12" sm="6" lg="6" align-self="center">
-          <div class="text-h4 py-3">STARTUP-CENTRIC APPROACH</div>
-
-          <div class="text-subtitle-1 py-2" v-for="n in 8" :key="n">
-            <v-icon color="primary" small left>mdi-checkbox-blank-circle</v-icon
-            >The Client picks up the most suitable and appropriate option, and
-            the project kicks off.
-          </div>
-        </v-col>
+        
       </v-row>
     </v-container>
   </div>

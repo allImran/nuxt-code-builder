@@ -26,7 +26,7 @@
               'any software solution',
               'create web apps',
               'mobile apps',
-              'CRP software solutions',
+              'ERP software solutions',
             ]"
             :repeat="Infinity"
             :shuffle="false"
