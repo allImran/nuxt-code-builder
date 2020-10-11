@@ -2,6 +2,7 @@
   <div>
     <div class="mt-6">
       <SliderSection />
+      <HomeIntro/>
       <ProjectSection />
       <PricingSection />
       <BlogSection />
@@ -17,6 +18,7 @@ import BlogSection from '@/components/blog/BlogSection'
 import ProjectSection from '@/components/project/ProjectSection'
 import ServiceSection from '@/components/service/ServiceSection'
 import {setMetadata} from '@/service/metaInfo'
+import HomeIntro from '@/components/homeIntro/HomeIntro'
 
 export default {
   name: 'home-page',
@@ -44,6 +46,7 @@ export default {
   },
   components: {
     SliderSection,
+    HomeIntro,
     PricingSection,
     BlogSection,
 
