@@ -17,17 +17,16 @@
         class="align-self-center text-center"
       >
         <div class="display-1 primary--text">
-          Hire Professionals for
+          Hire professionals for 
         </div>
 
         <client-only>
           <vue-typer
             :text="[
-              'software solutions',
-              'Jon Snow',
-              'Daenerys Targaryen',
-              'Melisandre',
-              'Tyrion Lannister',
+              'any software solution',
+              'create web apps',
+              'mobile apps',
+              'ERP software solutions',
             ]"
             :repeat="Infinity"
             :shuffle="false"
