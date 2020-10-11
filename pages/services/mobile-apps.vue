@@ -14,7 +14,7 @@
                   class="text-center text-sm-center text-lg-left mt-5 mt-sm-10 mt-lg-0"
                 >
                   <div class="text-sm-h4 text-lg-h4 text-h6 white--text">
-                    We Develop Custom Websites
+                    Moobile
                   </div>
                   <div
                     class="text-sm-h5 text-lg-h5 text-subtitle-1 white--text"
@@ -126,6 +126,7 @@ export default {
         { title: 'Services', url: '/services' },
         { title: 'Seo', url: '/services/1' },
       ],
+      sar: {},
     }
   },
 }
