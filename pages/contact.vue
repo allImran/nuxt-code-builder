@@ -14,26 +14,22 @@
             <div class="contact-left pa-md-5">
               <SubTitle align="left" :text="contactSubTitle" />
               <Title align="left" :text="contactTitle" />
-              <div class="contact-brief">
+              <div class="contact-brief pr-md-12">
                 <p>
-                  I have worls-class, flexible support via live chat, email and
-                  hone. I guarantee that you’ll be able to have any issue
-                  resolved within 24 hours.
+                  Interested in Code Builder Service? Just fill up the information below and we will contact with you as soon as possible.
                 </p>
               </div>
               <div class="information">
                 <p><strong>Phone</strong></p>
-                <p class="phone">01722454490</p>
+                <p class="phone">+8801722454490</p>
+                <p class="phone">+8801935923508</p>
               </div>
               <div class="information">
                 <p><strong>Email</strong></p>
-                <p>example@gmail.com</p>
-                <p>example@gmail.com</p>
+                <p>codebuilderit@gmail.com</p>
+               
               </div>
-              <div class="information">
-                <p><strong>Address</strong></p>
-                <p>27 Division St, New York, NY 10002,United States</p>
-              </div>
+              
             </div>
           </v-col>
           <v-col cols="12" md="6" sm="12">
@@ -82,9 +78,9 @@ export default {
   },
   data() {
     return {
-      title: 'Find the Perfect Solution for Your Business',
+      title: 'GOT A QUESTION?',
       sectionDescription:
-        'Lorem Ipsum ogravida nibh vel velit auctor alinean sollicitudi orem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh porttitor aliquam ex est',
+        'We’re here to help and answer any question you might have. We look forward to hearing from you ',
       pageTitle: 'Contact us',
       breadCrumbData: [
         { title: 'Home', url: '/' },
