@@ -6,6 +6,7 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
+    "generate": "nuxt generate",
     "export": "nuxt export",
     "serve": "nuxt serve",
     "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
@@ -20,7 +21,7 @@
     "lodash": "^4.17.20",
     "nodemailer": "^6.4.13",
     "nuxt": "^2.13.0",
-    "sweetalert2": "^10.3.5",
+    "sweetalert2": "^10.6.1",
     "vue-typer": "^1.2.0"
   },
   "devDependencies": {
