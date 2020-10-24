@@ -93,11 +93,11 @@ export default {
           icon: 'account-box',
           url: '/contact',
         },
-        {
-          title: 'blog',
-          icon: 'blogger',
-          url: '/blog',
-        },
+        // {
+        //   title: 'blog',
+        //   icon: 'blogger',
+        //   url: '/blog',
+        // },
         {
           title: 'services',
           icon: 'briefcase',
