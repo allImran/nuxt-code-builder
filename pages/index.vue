@@ -2,16 +2,11 @@
   <div>
     <div class="mt-6">
       <SliderSection />
-      <div class="spacing"></div>
       <HomeIntro/>
-      <div class="spacing"></div>
       <ProjectSection />
-      <div class="spacing"></div>
       <PricingSection />
-      <div class="spacing"></div>
       <!-- <BlogSection /> -->
       <ServiceSection />
-       <div class="spacing"></div>
     </div>
   </div>
 </template>
@@ -54,15 +49,8 @@ export default {
     HomeIntro,
     PricingSection,
     BlogSection,
-
     ProjectSection,
-
     ServiceSection,
   },
 }
 </script>
-<style style="scss">
-.spacing{
-padding: 2rem 0;
-}
-</style>

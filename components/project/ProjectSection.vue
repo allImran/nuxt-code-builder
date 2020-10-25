@@ -1,9 +1,17 @@
 <template>
-  <v-container fluid pa-0>
+  <div class="full-height-center">
+  <v-container pa-0>
     <SubTitle :text="subTitle" />
     <Title :text="title" />
+    <v-row>
+      <template v-for="n in 3">
+          <v-col md="4" sm="4">
+            <ProjectComponent />
+          </v-col>
+      </template>
+    </v-row>
 
-    <v-sheet class="mx-auto" elevation="0" max-width="1400">
+    <!-- <v-sheet class="mx-auto" elevation="0" max-width="1400">
       <v-slide-group v-model="model" center-active show-arrows>
         <v-slide-item
           v-for="n in 15"
@@ -24,8 +32,9 @@
           </v-card>
         </v-slide-item>
       </v-slide-group>
-    </v-sheet>
+    </v-sheet> -->
   </v-container>
+</div>
 </template>
 <script>
 import ProjectComponent from '@/components/project/ProjectComponent'
