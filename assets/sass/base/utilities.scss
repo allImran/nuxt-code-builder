@@ -3,3 +3,12 @@ $box-shadow-equal: 0px 0px 10px 0px rgba(216, 27, 96, 0.7);
 .max-view {
   max-width: 1200px !important;
 }
+
+
+.full-height-center {
+	padding: 100px 0; 
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}

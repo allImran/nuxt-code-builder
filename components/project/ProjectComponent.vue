@@ -1,7 +1,7 @@
 <template>
   <v-hover v-slot:default="{ hover }">
     <v-card flat light class="mx-auto">
-      <v-img src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg" height="300px">
+      <v-img src="/img/service/boi-kotha.png" height="260px">
         <v-expand-transition>
           <div
             v-if="hover"
@@ -11,10 +11,10 @@
             <v-btn outlined dark color="white" class="align-self-center">click here</v-btn>
           </div>
         </v-expand-transition>
-        <v-card-title class="white--text">Top western road trips</v-card-title>
-
-        <v-card-subtitle class="white--text">August 2, 2019</v-card-subtitle>
       </v-img>
+        <v-card-title >Top western road trips</v-card-title>
+
+        <v-card-subtitle >August 2, 2019</v-card-subtitle>
     </v-card>
   </v-hover>
 </template>

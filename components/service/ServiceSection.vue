@@ -1,4 +1,5 @@
 <template>
+  <div class="full-height-center">
   <v-container fluid pa-0 class="mb-6">
     <SubTitle :text="subTitle" />
     <Title :text="title" />
@@ -21,6 +22,7 @@
       </v-col>
     </v-row>
   </v-container>
+</div>
 </template>
 
 <script>
