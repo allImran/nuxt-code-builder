@@ -23,22 +23,26 @@
     <v-app-bar
       fixed
       app
-      elevation="0"
+     
       color="#fff"
       class="pl-lg-6 pl-sm-5 pl-0 pb-sm-0"
       height="80"
+    
+     
+       elevation="4"
     >
       <v-app-bar-nav-icon
-        class="hidden-sm-and-up mr-2 ml-2 mt-4"
+        class="hidden-sm-and-up mr-2 ml-2 "
         color="primary"
         @click.stop="drawer = !drawer"
       />
-      <nuxt-link to="/" class="mt-4">
+      <n-link to="/" class="mx-2">
         <v-img src="/logo@2x.png" max-width="40"></v-img>
-      </nuxt-link>
-      <nuxt-link to="/" tag="v-toolbar-title">
-        <v-toolbar-title class="pl-3 pr-12 primary--text mt-4" v-text="title" />
-      </nuxt-link>
+      </n-link>
+      <n-link  to="/" tag="v-toolbar-title"   class="mx-2">
+        <v-toolbar-title class="primary--text " v-text="title" />
+      </n-link>
+
 
       <v-btn
         @click="goToUrl(menu.url)"
@@ -46,7 +50,7 @@
         v-for="(menu, index) in menus"
         :key="index"
         color="secondary"
-        class="text-capitalize hidden-xs-only"
+        class="text-capitalize hidden-xs-only "
       >
         <v-icon left color="secondary">mdi-{{ menu.icon }}</v-icon>
         {{ menu.title }}
